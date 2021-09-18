@@ -23,7 +23,7 @@ namespace AdventureGame
 			Random Random = seed == 0 ? new Random() : new Random(seed);
 			//name and gender
 			gender = Random.Next(2) > 0 ? Gender.Male : Gender.Female;
-			name = Names[(int)gender][Random.Next(Names[(int)gender].Length)];
+			name = Names[(int)gender][Random.Next(Names[(int)gender].Length)] + " " + Names[2][Random.Next(Names[2].Length)];
 
 			//class
 			type = (AdventureClass)Random.Next(Enum.GetNames(typeof(AdventureClass)).Length);
